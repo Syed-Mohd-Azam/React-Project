@@ -1,8 +1,13 @@
+import Square from "./Square";
+import Input from "./Input";
 import "./App.css";
 function App() {
   return (
     <>
-      <div className="App"></div>
+      <div className="App">
+        <Square />
+        <Input />
+      </div>
     </>
   );
 }
