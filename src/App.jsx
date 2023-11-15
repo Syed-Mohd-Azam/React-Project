@@ -1,6 +1,5 @@
 import Square from "./Square";
 import Input from "./Input";
-import "./App.css";
 function App() {
   return (
     <>

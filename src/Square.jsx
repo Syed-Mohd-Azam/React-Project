@@ -1,8 +1,14 @@
-const Square = () => {
+/* eslint-disable react/prop-types */
+const Square = ({ colorValue }) => {
   return (
     <>
-      <div className="square"></div>
+      <section className="square" style={{ backgroundColor: colorValue }}>
+        <p>{colorValue ? colorValue : "Empty Color Value"}</p>
+      </section>
     </>
   );
+};
+Square.defaultProps = {
+  colorValue: "Empty Color Value",
 };
 export default Square;

@@ -1,7 +1,18 @@
-const Input = () => {
+/* eslint-disable react/prop-types */
+const Input = ({ colorValue, setColorValue }) => {
   return (
     <>
-      <div className="input"></div>
+      <form>
+        <label>Add Color Name : </label>
+        <input
+          autoFocus
+          type="text"
+          placeholder="Add Color Name"
+          required
+          value={colorValue}
+          onChange={(e) => setColorValue(e.target.value)}
+        />
+      </form>
     </>
   );
 };
