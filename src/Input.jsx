@@ -1,5 +1,12 @@
 /* eslint-disable react/prop-types */
-const Input = ({ colorValue, setColorValue }) => {
+import colorNames from "colornames";
+const Input = ({
+  colorValue,
+  setColorValue,
+  setHexValue,
+  isDarkText,
+  setIsDarkText,
+}) => {
   return (
     <>
       <form>
@@ -10,8 +17,14 @@ const Input = ({ colorValue, setColorValue }) => {
           placeholder="Add Color Name"
           required
           value={colorValue}
-          onChange={(e) => setColorValue(e.target.value)}
+          onChange={(e) => {
+            setColorValue(e.target.value.to);
+            setHexValue(colorNames(e.target.value));
+          }}
         />
+        <button type="button" onClick={() => setIsDarkText(!isDarkText)}>
+          Toggle Text Color
+        </button>
       </form>
     </>
   );
