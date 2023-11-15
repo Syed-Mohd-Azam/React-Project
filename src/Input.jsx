@@ -9,7 +9,7 @@ const Input = ({
 }) => {
   return (
     <>
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         <label>Add Color Name : </label>
         <input
           autoFocus
@@ -18,7 +18,7 @@ const Input = ({
           required
           value={colorValue}
           onChange={(e) => {
-            setColorValue(e.target.value.to);
+            setColorValue(e.target.value);
             setHexValue(colorNames(e.target.value));
           }}
         />
