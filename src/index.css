@@ -33,6 +33,7 @@ body {
   font-size: 1.2rem;
   justify-content: center;
   align-items: center;
+  letter-spacing: 2px;
 }
 form {
   width: 400px;
@@ -54,6 +55,7 @@ input[type="text"] {
   box-shadow: 2px 2px 5px black;
   border: none;
   text-align: center;
+  letter-spacing: 2px;
 }
 button {
   width: 100%;
@@ -67,6 +69,7 @@ button {
   color: black;
   border: none;
   text-align: center;
+  letter-spacing: 2px;
 }
 button:hover {
   cursor: pointer;
